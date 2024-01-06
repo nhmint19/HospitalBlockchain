@@ -13,4 +13,10 @@ npm install
 npm start
 ```
 
+To format code run
+
+```shell
+npm run format
+```
+
 and view the demo at localhost:3000
