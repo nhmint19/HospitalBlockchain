@@ -3,24 +3,22 @@ import { Link } from 'react-router-dom';
 import { Typography, Container, Button, Paper } from '@mui/material';
 import SearchOffIcon from '@mui/icons-material/SearchOff';
 
-import styles from '../styles'; // Import the styles from a separate file
-
 const NotFound: React.FC = () => {
   return (
     <Container maxWidth="sm">
-      <Paper elevation={3} sx={styles.container}>
-        <SearchOffIcon sx={styles.icon} fontSize="large" />
-        <Typography variant="h5" sx={styles.title}>
+      <Paper elevation={3} className="flex flex-col items-center p-5 mt-10">
+        <SearchOffIcon className="text-error" fontSize="large" />
+        <Typography variant="h5" className="mt-20 ">
           404 - Page Not Found
         </Typography>
-        <Typography variant="body1" sx={styles.text}>
+        <Typography variant="body1" className="mt-10">
           The page you are looking for does not exist. Please return to the{' '}
-          <Link to="/" style={styles.link}>
+          <Link to="/" className="link">
             homepage
           </Link>
           .
         </Typography>
-        <Button variant="contained" color="primary" component={Link} to="/" sx={styles.button}>
+        <Button variant="contained" color="primary" component={Link} to="/" className="mt-20">
           Go to Homepage
         </Button>
       </Paper>
