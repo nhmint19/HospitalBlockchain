@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Assuming you have set up routing
+import { Link } from 'react-router-dom';
 
 import { Button, Container, Typography, Grid, Card, CardContent, CardActions } from '@mui/material';
-import Layout from './Layout';
+import Layout from '../components/layout/Layout';
 import FeatureCard from '../components/home/FeatureCard';
 
 const HomePage: React.FC = () => {
