@@ -1,9 +1,9 @@
-import React from 'react';
-import { Button, Container, Typography, Grid, Card, CardContent, CardActions } from '@mui/material';
+import { Button, Typography, Card, CardContent, CardActions } from '@mui/material';
 
 type Props = {
   title: string;
   desc: string;
+  learnMore: () => void;
 };
 
 const FeatureCard = (props: Props) => {
@@ -16,7 +16,7 @@ const FeatureCard = (props: Props) => {
         <Typography variant="body2">{props.desc}</Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" color="secondary">
+        <Button size="small" color="secondary" onClick={props.learnMore}>
           Learn More
         </Button>
       </CardActions>

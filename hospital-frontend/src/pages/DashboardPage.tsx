@@ -27,7 +27,7 @@ const DashboardPage: React.FC = () => {
       withCredentials: true,
     });
 
-    navigate('/login');
+    navigate('/');
   }
 
   return (
