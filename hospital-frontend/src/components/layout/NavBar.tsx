@@ -3,7 +3,7 @@ import { Typography, AppBar, Toolbar } from '@mui/material';
 
 const NavBar: React.FC = () => {  
   return (
-    <AppBar className="opacity-50 " position="sticky">
+    <AppBar className="opacity-80" position="sticky">
       <Toolbar className='navbar bg-primaryLight'>
         <Typography variant="h6" className="text-textLight">Hospital Collaboration</Typography>
       </Toolbar>

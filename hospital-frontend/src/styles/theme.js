@@ -10,5 +10,8 @@ export const Theme = createTheme({
     primary: {
       main: tailwindConfig.theme.colors.primaryLight,
     },
+    secondary: {
+      main: tailwindConfig.theme.colors.textLight,
+    }
   },
 });

@@ -1,32 +1,53 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Button, Container, Typography, Grid } from '@mui/material';
+import { Button, Container, Typography, Grid, Divider } from '@mui/material';
 import Layout from '../components/layout/Layout';
 import FeatureCard from '../components/home/FeatureCard';
+import WavyBackground from '../components/home/WavyBackground';
 
 const HomePage: React.FC = () => {
   return (
     <Layout>
-      <div className="bg-cover bg-center flex items-center justify-center flex-col text-black text-center h-screen">
-        <Typography variant="h3">Welcome to Our App</Typography>
-        <Typography variant="subtitle1">Revolutionizing Hospital Collaboration</Typography>
-        <Button variant="contained" className="bg-primaryLight" component={Link} style={{ marginTop: '16px' }} to="/login">
-          Login
-        </Button>
-      </div>
+      <WavyBackground>
+        <div className="flex items-center justify-center flex-col text-black text-center h-[80vh]">
+          <Typography variant="h3" mb={2}>
+            Welcome to Our App
+          </Typography>
+          <Typography variant="h6">Revolutionizing Hospital Collaboration</Typography>
+          <Button
+            variant="contained"
+            className="bg-primaryLight"
+            component={Link}
+            style={{ marginTop: '16px' }}
+            to="/login"
+          >
+            Login
+          </Button>
+        </div>
+      </WavyBackground>
 
-      <Container className="mt-6">
-        <Typography variant="h4">About Our App</Typography>
-        <Typography variant="body1">
-          Our Hospital Collaboration App is designed to streamline the exchange of patient records securely and
-          efficiently between healthcare professionals and institutions. With blockchain technology, we ensure the
-          highest level of security and transparency.
-        </Typography>
+      <Divider orientation="horizontal" className="!mx-[5%]" />
+      <Container className="my-6 !flex h-[50vh]">
+        <div className="w-1/2">
+          <Typography variant="h4" mt={2} mb={3}>
+            About Our App
+          </Typography>
+          <Typography variant="h6">
+            Our Hospital Collaboration App is designed to streamline the exchange of patient records securely and
+            efficiently between healthcare professionals and institutions. With blockchain technology, we ensure the
+            highest level of security and transparency.
+          </Typography>
+        </div>
+        <div className="w-1/2 flex justify-center text-primaryLight">
+          <img src="./hospital.svg" alt="Hospital" className="text-primaryLight" />
+        </div>
       </Container>
-
-      <Container className="mt-10">
-        <Typography variant="h4">Key Features</Typography>
+      <Divider orientation="horizontal" className="!mx-[5%]" />
+      <Container className="my-6">
+        <Typography variant="h4" mt={2} mb={3}>
+          Key Features
+        </Typography>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={4}>
             <FeatureCard
