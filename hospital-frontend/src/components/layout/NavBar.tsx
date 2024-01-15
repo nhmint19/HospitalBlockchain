@@ -1,11 +1,11 @@
 import React from 'react';
 import { Typography, AppBar, Toolbar } from '@mui/material';
 
-const NavBar: React.FC = () => {
+const NavBar: React.FC = () => {  
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6">Hospital Collaboration</Typography>
+    <AppBar className="opacity-50 " position="sticky">
+      <Toolbar className='navbar bg-primaryLight'>
+        <Typography variant="h6" className="text-textLight">Hospital Collaboration</Typography>
       </Toolbar>
     </AppBar>
   );

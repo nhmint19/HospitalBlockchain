@@ -7,6 +7,8 @@ import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import DashboardPage from './pages/DashboardPage';
 import LoginPage from './pages/LoginPage';
+import { ThemeProvider } from '@mui/material';
+import { Theme } from './styles/theme';
 
 const queryClient = new QueryClient();
 
@@ -33,7 +35,9 @@ const App: React.FC = () => {
   return (
     <WagmiProvider config={WagmiConfig}>
       <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />;
+        <ThemeProvider theme={Theme}>
+          <RouterProvider router={router} />;
+        </ThemeProvider>
       </QueryClientProvider>
     </WagmiProvider>
   );

@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Button, Container, Typography, Grid, Card, CardContent, CardActions } from '@mui/material';
+import { Button, Container, Typography, Grid } from '@mui/material';
 import Layout from '../components/layout/Layout';
 import FeatureCard from '../components/home/FeatureCard';
 
 const HomePage: React.FC = () => {
   return (
     <Layout>
-      <div className="bg-cover bg-center h-[220px] flex items-center justify-center flex-col text-black text-center">
+      <div className="bg-cover bg-center flex items-center justify-center flex-col text-black text-center h-screen">
         <Typography variant="h3">Welcome to Our App</Typography>
         <Typography variant="subtitle1">Revolutionizing Hospital Collaboration</Typography>
-        <Button variant="contained" color="primary" component={Link} style={{ marginTop: '16px' }} to="/login">
+        <Button variant="contained" className="bg-primaryLight" component={Link} style={{ marginTop: '16px' }} to="/login">
           Login
         </Button>
       </div>

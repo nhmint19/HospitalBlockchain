@@ -1,6 +1,6 @@
 ## Requirements
 
-To be able to run the demo the following setup is required.
+To be able to run the server the following setup is required.
 
 - node.js version v.17.5.0 or newer.
 
@@ -19,4 +19,4 @@ To format code run
 npm run format
 ```
 
-and view the demo at localhost:3000
+server runs at localhost:4000
